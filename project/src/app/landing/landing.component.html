@@ -1,0 +1,39 @@
+<button (click)="button()">formData</button>
+<br><br>
+<div>
+    <form [formGroup]="form">
+        <div>
+            <label>GST No:</label>
+            <input type="text" placeholder="Enter GST No" formControlName="GSTNo">&nbsp;&nbsp;
+            PAN No:<input type="text" placeholder="Ex:AAECN1498C">&nbsp;&nbsp;
+            Code:<input type="text" placeholder="Enter Code" formControlName="Code">
+        </div>
+        <br><br>
+        <div>
+            Name:<input type="text" placeholder="Enter Namr" formControlName="Name">&nbsp;&nbsp;
+            Address:<input type="text" placeholder="Enter Address" formControlName="Address">&nbsp;&nbsp;
+            Pincode:<input type="pincode" placeholder="Enter  Pincode" formControlName="Pincode">
+        </div>
+        <br><br>
+        <div>
+            Country:<input type="text" placeholder="Enter GST No" formControlName="Country">&nbsp;&nbsp;
+            State:<input type="state" placeholder="Enter GST No" formControlName="State">&nbsp;&nbsp;
+            City:<input type="text" placeholder="Enter GST No" formControlName="City">
+        </div>
+        <br><br><br>
+        <div>
+            &nbsp;&nbsp;&nbsp;&nbsp;Mobile No:<input type="text" placeholder="Enter GST No"
+                formControlName="MobileNo">&nbsp;&nbsp;
+            Email:<input type="Email" placeholder="Enter GST No" formControlName="Email">
+        </div>
+        <br><br>
+        <div>
+            Latitude:<input type="text" placeholder="Enter GST No" formControlName="GSTNo">&nbsp;&nbsp;
+            Longitude:<input type="text" placeholder="Enter GST No" formControlName="GSTNo">&nbsp;&nbsp;
+            currency:<input type="currency" placeholder="Enter GST No" formControlName="currency">
+        </div>
+        <div>
+            <button class="button" (click)="submit()">save</button>
+        </div>
+    </form>
+</div>
