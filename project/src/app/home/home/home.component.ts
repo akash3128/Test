@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
+import { APIService } from 'src/app/common/api.service';
 
 @Component({
   selector: 'app-home',
@@ -7,4 +9,45 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
+  
+
+  public fDetails: any;
+  public Name!: string;
+
+  public formlDetails: any[] = []
+  public showTable: any;
+  public dataById:any;
+  
+   constructor(private router: Router, private apiservices:APIService
+     ) { }
+  
+   ngOnInit() {
+     console.log('oninit calling...');
+    // this.userName = this.commonService.userName;
+    // this.Name = 'akash'
+    this.Details
+   }
+ 
+  
+   async Details() {
+     this.showTable = !this.showTable;
+    let endPoint = 'form';
+
+     this.fDetails = await this.apiservices.getApiCall(endPoint).toPromise()
+     console.log('formdetails', this.fDetails);
+     this.formlDetails = []
+     
+   }
+  
+  //  async deleteRecord(id:number){
+  //    await this.apiservices.deletApiCall('hotelDetails', id).toPromise();
+  //  }
+  
+  
+  //  async edit(id:number){
+  //    this.apiservices.id = id;
+  //    this.dataById = await this.apiservices.getApiCall('hotelDetails', id).toPromise();
+  //    this.apiservices.dataById = this.dataById;
+     
+  //  }
 }

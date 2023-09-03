@@ -1,1 +1,36 @@
-<p>home works!</p>
+<button (click)="Details()">Details</button>
+
+<div  >
+ <table  *ngIf="formlDetails.length > 0 && showTable" >
+    <tr>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Country</th>
+        <th>state</th>
+        <th>City</th>
+        <th>MobileNo</th>
+        <th>Email</th>
+        <th>GSTNo</th>
+        <th>PanNo</th>
+        <th>Delete</th>
+        <th>Edit</th>
+    </tr>
+    <tr *ngFor="let formData of formlDetails">
+       <td>{{formData.Code}}</td>
+       <td>{{formData.Name}}</td>
+       <td>{{formData.Address}}</td>
+       <td>{{formData.Country}}</td>
+       <td>{{formData.state}}</td>
+       <td>{{formData.City}}</td>
+       <td>{{formData.MobileNo}}</td>
+       <td>{{formData.Email}}</td>
+       <td>{{formData.GSTNo}}</td>
+       <td>{{formData.PanNo}}</td>
+       
+       
+       <td> (click)="delete(formData.id)">delete</td>
+       <td>(click)="edit(formData.id)" >mode_edit</td>
+    </tr>
+</table>
+</div>

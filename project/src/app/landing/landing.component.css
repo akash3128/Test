@@ -3,3 +3,9 @@ form{
     width: 100%;
     left: 0%;
 }
+
+.error{
+    border: 1px solid red;
+   
+    
+}
