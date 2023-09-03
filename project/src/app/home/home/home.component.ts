@@ -51,4 +51,6 @@ export class HomeComponent {
      
      this.router.navigateByUrl('/landing')
    }
+
+   searchText='';
 }

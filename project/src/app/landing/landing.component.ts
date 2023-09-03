@@ -103,6 +103,6 @@ getControl(name:any):AbstractControl|null{
     this.personDetails();
   }
   add(){
-
+this.show
   }
 }
