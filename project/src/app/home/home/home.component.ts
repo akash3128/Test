@@ -11,7 +11,7 @@ export class HomeComponent {
 
   
 
-  public fDetails: any;
+  public fDetails: any=[];
   public Name!: string;
 
   public formlDetails: any[] = []
@@ -23,9 +23,9 @@ export class HomeComponent {
   
    ngOnInit() {
      console.log('oninit calling...');
-    // this.userName = this.commonService.userName;
-    // this.Name = 'akash'
-    this.Details
+   
+    this.Name = 'akash'
+   
    }
  
   
@@ -39,15 +39,16 @@ export class HomeComponent {
      
    }
   
-  //  async deleteRecord(id:number){
-  //    await this.apiservices.deletApiCall('hotelDetails', id).toPromise();
-  //  }
+   async deleteRecord(id:number){
+     await this.apiservices.deletApiCall('form', id).toPromise();
+   }
   
   
-  //  async edit(id:number){
-  //    this.apiservices.id = id;
-  //    this.dataById = await this.apiservices.getApiCall('hotelDetails', id).toPromise();
-  //    this.apiservices.dataById = this.dataById;
+   async edit(id:number){
+     this.apiservices.id = id;
+     this.dataById = await this.apiservices.getApiCall('form', id).toPromise();
+     this.apiservices.dataById = this.dataById;
      
-  //  }
+     this.router.navigateByUrl('/landing')
+   }
 }

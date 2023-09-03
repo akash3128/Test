@@ -1,6 +1,6 @@
 <button (click)="button()">formData</button>
 <br><br>
-<div>
+<div class="main">
     <form [formGroup]="form">
         <div>
             <label>GST No:</label>
@@ -62,12 +62,12 @@
         </div>
         <br>
 
-        <button (click)="attached()"> button</button>
+        <button (click)="attached()"><i class="bi bi-paperclip"></i> attached </button>
 
         <form [formGroup]="personForm" *ngIf="showForm">
-           
-             <h3>Contact Person Details</h3>
-          
+
+            <h3>Contact Person Details</h3>
+
             <label>Name:</label>
             <input type="text" placeholder="Enter Person Name" formControlName="name"
                 [ngClass]="{error:getControl('name')?.errors && getControl('name')?.touched}">&nbsp;&nbsp;
@@ -83,14 +83,17 @@
             <label>Designation:</label>
             <input type="text" placeholder="Enter Designation" formControlName="Designation"
                 [ngClass]="{error:getControl('Designation')?.errors && getControl('Designation')?.touched}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <button (click)="add()">add</button>
 
-
+            <button class="bu" (click)="add()">add</button>&nbsp;&nbsp;
+            <button class="but" (click)="attached()">Cancel</button>
+            <div class="ab">
+                <form [formGroup]="show"></form>
+            </div>
 
         </form>
 
         <div><br><br><br><br><br><br><br><br>
-            <button class="button" (click)="submit()">save</button>
+            <button class="bu" (click)="submit()">save</button>
         </div>
     </form>
 </div>

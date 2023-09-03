@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { AbstractControl, FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { APIService } from '../common/api.service';
-import { __values } from 'tslib';
+
 
 @Component({
   selector: 'app-landing',
@@ -13,6 +13,7 @@ export class LandingComponent {
 
   form!: FormGroup
   personForm!:FormGroup
+  show!:FormGroup
   dataById: any;
   editId: any;
   showForm: boolean = false;
@@ -28,6 +29,7 @@ export class LandingComponent {
   }
   submit() {
     let endpoint='form';
+    
     console.log('this.form', this.form.value);
 
       
@@ -78,13 +80,14 @@ else{
   }
   personDetails() {
     this.personForm = this.fb.group({
-      name: [],
-      mobile: [],
-      email:[],
-      Department: [],
-      Designation:[],
+      name: ['',Validators.required],
+      mobile:  ['',Validators.required],
+      email: ['',Validators.required],
+      Department:  ['',Validators.required],
+      Designation: ['',Validators.required],
     })
   }
+
 
 getControl(name:any):AbstractControl|null{
   return this.form.get(name)
