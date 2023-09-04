@@ -7,13 +7,14 @@ import { LandingComponent } from './landing/landing.component';
 import {  HttpClientModule } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
-import { SearchPipe } from './search.pipe';
+
+import { DashbordComponent } from './dashbord/dashbord.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingComponent,
-    SearchPipe
+    DashbordComponent
   ],
   imports: [
     BrowserModule,

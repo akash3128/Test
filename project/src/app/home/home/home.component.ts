@@ -9,48 +9,59 @@ import { APIService } from 'src/app/common/api.service';
 })
 export class HomeComponent {
 
-  
 
-  public fDetails: any=[];
+
+  public fDetails: any = [];
   public Name!: string;
-
   public formlDetails: any[] = []
   public showTable: any;
-  public dataById:any;
-  
-   constructor(private router: Router, private apiservices:APIService
-     ) { }
-  
-   ngOnInit() {
-     console.log('oninit calling...');
-   
+  public dataById: any;
+  searchText:any;
+
+  constructor(private router: Router, private apiservices: APIService
+  ) { }
+
+  ngOnInit() {
+    console.log('oninit calling...');
+
     this.Name = 'akash'
-   
-   }
- 
-  
-   async Details() {
-     this.showTable = !this.showTable;
+
+  }
+
+
+  async Details() {
+    this.showTable = !this.showTable;
     let endPoint = 'form';
 
-     this.fDetails = await this.apiservices.getApiCall(endPoint).toPromise()
-     console.log('formdetails', this.fDetails);
-     this.formlDetails = []
-     
-   }
-  
-   async deleteRecord(id:number){
-     await this.apiservices.deletApiCall('form', id).toPromise();
-   }
-  
-  
-   async edit(id:number){
-     this.apiservices.id = id;
-     this.dataById = await this.apiservices.getApiCall('form', id).toPromise();
-     this.apiservices.dataById = this.dataById;
-     
-     this.router.navigateByUrl('/landing')
-   }
+    this.fDetails = await this.apiservices.getApiCall(endPoint).toPromise()
+    console.log('formdetails', this.fDetails);
+    this.formlDetails = []
 
-   searchText='';
+  }
+
+  async deleteRecord(id: number) {
+    this.showTable = !this.showTable;
+    await this.apiservices.deletApiCall('form', id).toPromise();
+    this.Details();
+  }
+
+
+  edit(id: number) {
+    this.apiservices.id = id;
+    this.dataById =  this.apiservices.getApiCall('form', id).subscribe(res=>{
+      this.apiservices.dataById =res
+    })
+    // this.apiservices.dataById = this.dataById;
+
+    this.router.navigateByUrl('/landing')
+  }
+
+  
+  back(){
+  this.router.navigateByUrl('/dashbord')
 }
+}
+// async edit(id: number) {
+//   this.apiservices.id = id;
+//   this.dataById = await this.apiservices.getApiCall('form', id).toPromise();
+//   this.apiservices.dataById = this.dataById;

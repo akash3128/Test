@@ -23,14 +23,18 @@ export class LandingComponent {
     private apiservice:APIService) { }
 
   ngOnInit() {
-
+this.editId=this.apiservice.id;
+ this.dataById=this.apiservice.dataById;
+ console.log(this.dataById,this.editId);
+ 
     this.FormDetails();
-
+  
   }
   submit() {
     let endpoint='form';
     
     console.log('this.form', this.form.value);
+    this.router.navigateByUrl('/dashbord')
 
       
 let request={
@@ -62,20 +66,20 @@ else{
   }
   FormDetails() {
     this.form = this.fb.group({
-      GSTNo: ['', Validators.required,],
-      PANNo: ['', Validators.required,Validators.pattern(/^[A-Za-z]{5}\d{4}[A-Za-z]{1}$/)],
-      Code: ['', Validators.required],
-      Name: ['', Validators.required, Validators.pattern("[a-zA-Z ]*$")],
-      Address: ['', Validators.required],
-      Pincode: ['', Validators.required],
-      Country: ['', Validators.required],
-      State: ['', Validators.required],
-      City: ['', Validators.required],
-      MobileNo: ['', Validators.required,Validators.pattern("[0-9]*$"),Validators.minLength(10),Validators.maxLength(10)],
-      Email: ['', Validators.required],
-      Latitude: ['', Validators.required],
-      Longitude: ['', Validators.required],
-      currency: ['', Validators.required],
+      GSTNo: [ this.dataById? this.dataById.GSTNo:'', Validators.required,],
+      PANNo: [this.dataById? this.dataById.PANNo:'', Validators.required,Validators.pattern(/^[A-Za-z]{5}\d{4}[A-Za-z]{1}$/)],
+      Code: [this.dataById? this.dataById.Code:'', Validators.required],
+      Name: [this.dataById? this.dataById.Name:'', Validators.required, Validators.pattern("[a-zA-Z ]*$")],
+      Address: [this.dataById? this.dataById.Address:'', Validators.required],
+      Pincode: [this.dataById? this.dataById.Pincode:'', Validators.required],
+      Country: [this.dataById? this.dataById.Country:'', Validators.required],
+      State: [this.dataById? this.dataById.State:'', Validators.required],
+      City: [this.dataById? this.dataById.City:'', Validators.required],
+      MobileNo: [this.dataById? this.dataById.MobileNo:'', Validators.required,Validators.pattern("[0-9]*$"),Validators.minLength(10),Validators.maxLength(10)],
+      Email: [this.dataById? this.dataById.Email:'', Validators.required],
+      Latitude: [this.dataById? this.dataById.Latitude:'', Validators.required],
+      Longitude: [this.dataById? this.dataById.Longitude:'', Validators.required],
+      currency: [this.dataById? this.dataById.currency:'', Validators.required],
     })
   }
   personDetails() {
@@ -85,6 +89,12 @@ else{
       email: ['',Validators.required],
       Department:  ['',Validators.required],
       Designation: ['',Validators.required],
+    })
+  }
+
+  showdetails(){
+    this.show =this.fb.group({
+      '':['']
     })
   }
 
@@ -102,7 +112,16 @@ getControl(name:any):AbstractControl|null{
     this.showForm = !this.showForm;
     this.personDetails();
   }
+  cancal(){
+    this.router.navigateByUrl('/landing')
+    
+  }
+
   add(){
-this.show
+this.showdetails
+  }
+
+  back(){
+    this.router.navigateByUrl('/dashbord')
   }
 }

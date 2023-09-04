@@ -18,11 +18,28 @@ form{
     height: 100%;
     width: 100%;
 }
-.bu{
-    background-color: rgb(69, 209, 69);
-    color: white;
+.butt{
+    left: 20px;
+    margin-bottom: 20px;
 }
-.but{
-    background-color: red;
-    color: white;
+.personForm{
+  border: 1px solid rgb(139, 139, 139);
+    width:98%;
+    height: 500px;
+    margin-left: 7px;
+    margin-right: 5px;  
+}
+.redcol{
+    color: red;
+}
+label{
+color: black;
+font-weight: bold;
+}
+.showdetail{border: 1px solid rgb(139, 139, 139);
+    width:98%;
+    height: 300px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 7px;
 }

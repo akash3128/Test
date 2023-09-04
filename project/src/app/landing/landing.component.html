@@ -1,12 +1,12 @@
 <nav class="navbar navbar-light bg-light">
-<button (click)="button()">formData</button>
+    <button type="button" class="btn btn-outline-danger"(click)="back()">back</button>
 </nav>
 <br><br>
 <div class="main">
     <form [formGroup]="form">
         <div>
             <label>GST No:</label>
-            <input type="text" placeholder="Enter GST No" formControlName="GSTNo" 
+            <input type="text" placeholder="Enter GST No" formControlName="GSTNo"
                 [ngClass]="{error:getControl('GSTNo')?.errors && getControl('GSTNo')?.touched}">&nbsp;&nbsp;
 
 
@@ -16,14 +16,14 @@
                 [ngClass]="{error:getControl('PANNo')?.errors && getControl('PANNo')?.touched}">&nbsp;&nbsp;
 
 
-            <label>Code:</label>
+            <label class="redcol">Code:</label>
             <input type="text" placeholder="Enter Code" formControlName="Code"
                 [ngClass]="{error:getControl('Code')?.errors && getControl('Code')?.touched}">
         </div>
         <br><br>
 
         <div>
-            <label> Name:</label>
+            <label class="redcol"> Name:</label>
             <input type="text" placeholder="Enter Namr" formControlName="Name"
                 [ngClass]="{error:getControl('Name')?.errors && getControl('Name')?.touched}">&nbsp;&nbsp;
 
@@ -33,7 +33,7 @@
                 [ngClass]="{error:getControl('Address')?.errors && getControl('Address')?.touched}">&nbsp;&nbsp;
 
 
-            <label>Pincode</label>
+            <label>Pincode:</label>
             <input type="pincode" placeholder="Enter  Pincode" formControlName="Pincode"
                 [ngClass]="{error:getControl('Pincode')?.errors && getControl('Pincode')?.touched}">
         </div>
@@ -86,54 +86,54 @@
         </div>
         <br>
 
-        <button (click)="attached()"><i class="bi bi-paperclip"></i> attached </button>
+        <button class="butt" (click)="attached()"><i class="bi bi-paperclip"></i> attached </button>
+        <div >
+            <form class="personForm" [formGroup]="personForm" *ngIf="showForm">
 
-        <form [formGroup]="personForm" *ngIf="showForm">
-
-            <h3>Contact Person Details</h3>
-
-            <label>Name:</label>
-            <input type="text" placeholder="Enter Person Name" formControlName="name"
-                [ngClass]="{error:getControl('name')?.errors && getControl('name')?.touched}">&nbsp;&nbsp;
-
-
-            <label>Mobile:</label>
-            <input type="text" placeholder="Enter Mobile no" formControlName="mobile"
-                [ngClass]="{error:getControl('mobile')?.errors && getControl('mobile')?.touched}">&nbsp;&nbsp;
+                <h3>Contact Person Details</h3><hr>
+<br>
+                <label class="redcol">Name:</label>
+                <input type="text" placeholder="Enter Person Name" formControlName="name"
+                    [ngClass]="{error:getControl('name')?.errors && getControl('name')?.touched}">&nbsp;&nbsp;
 
 
-            <label>Email:</label>
-            <input type="text" placeholder="Enter Email" formControlName="email"
-                [ngClass]="{error:getControl('email')?.errors && getControl('email')?.touched}">&nbsp;&nbsp; <br><br>
+                <label class="redcol">Mobile:</label>
+                <input type="text" placeholder="Enter Mobile no" formControlName="mobile"
+                    [ngClass]="{error:getControl('mobile')?.errors && getControl('mobile')?.touched}">&nbsp;&nbsp;
 
 
-            <label>Department:</label>
-            <input type="text" placeholder="Enter Department" formControlName="Department"
-                [ngClass]="{error:getControl('Department')?.errors && getControl('Department')?.touched}">&nbsp;&nbsp;
+                <label>Email:</label>
+                <input type="text" placeholder="Enter Email" formControlName="email"
+                    [ngClass]="{error:getControl('email')?.errors && getControl('email')?.touched}">&nbsp;&nbsp;
+                <br><br>
 
 
-            <label>Designation:</label>
-            <input type="text" placeholder="Enter Designation" formControlName="Designation"
-                [ngClass]="{error:getControl('Designation')?.errors && getControl('Designation')?.touched}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <label class="redcol">Department:</label>
+                <input type="text" placeholder="Enter Department" formControlName="Department"
+                    [ngClass]="{error:getControl('Department')?.errors && getControl('Department')?.touched}">&nbsp;&nbsp;
+
+
+                <label class="redcol">Designation:</label>
+                <input type="text" placeholder="Enter Designation" formControlName="Designation"
+                    [ngClass]="{error:getControl('Designation')?.errors && getControl('Designation')?.touched}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
 
 
-            <button ype="button" class="btn btn-success"(click)="add()">add</button>&nbsp;&nbsp;
-            <button type="button" class="btn btn-danger" (click)="attached()">Cancel</button>
-            
+                <button ype="button" class="btn btn-success" (click)="add()">add</button>&nbsp;&nbsp;
+                <button type="button" class="btn btn-danger" (click)="attached()">Cancel</button>
 
-        </form>
-        <!-- <div>
-            <form [formGroup]="show">
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Example textarea</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                  </div>
+
+          
+        <div>
+            <form  class="showdetail" [formGroup]="show">
+                <nav class="navbar navbar-light bg-light"></nav>
             </form>
-        </div> -->
-
-        <div><br><br><br><br><br><br><br><br>
-            <button type="button" class="btn btn-success"(click)="submit()">save</button>
+        </div>
+    </form>
+</div>
+        <div><br>
+            <button type="button" class="btn btn-success" (click)="submit()">save</button>&nbsp;&nbsp;
+            <button type="button" class="btn btn-danger" (click)="cancal()">Cancel</button>
         </div>
     </form>
 </div>

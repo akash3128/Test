@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HomeRoutingModule } from './home-routing.module';
 import { HomeComponent } from './home/home.component';
 import { FormsModule } from '@angular/forms';
+import { SheredModule } from '../shered/shered.module';
 
 
 @NgModule({
@@ -14,6 +15,8 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     HomeRoutingModule,
     FormsModule,
+ SheredModule 
+
   ]
 })
 export class HomeModule { }
