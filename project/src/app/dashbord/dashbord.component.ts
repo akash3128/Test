@@ -8,14 +8,14 @@ import { Router } from '@angular/router';
 })
 export class DashbordComponent {
 
-  constructor(private router:Router){}
+  constructor(private router: Router) { }
 
   details() {
     this.router.navigateByUrl('/home');
   }
 
 
-  form(){
+  form() {
     this.router.navigateByUrl('/landing')
   }
 }

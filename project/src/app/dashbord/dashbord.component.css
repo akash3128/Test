@@ -1,8 +1,14 @@
-.ngdiv
-{
-    background-color: rgb(243, 232, 218);
+.wel {
+    text-align: center;
+    justify-content: center;
+    position: relative;
+    top: 250px;
 }
 
-.nav{
+.nav {
     float: left;
 }
+
+/* img{
+    background-image: url("..\assets\img1.jpg");
+} */

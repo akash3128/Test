@@ -8,15 +8,12 @@ import { APIService } from 'src/app/common/api.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-
-
-
   public fDetails: any = [];
   public Name!: string;
   public formlDetails: any[] = []
   public showTable: any;
   public dataById: any;
-  searchText:any;
+  searchText: any;
 
   constructor(private router: Router, private apiservices: APIService
   ) { }
@@ -27,8 +24,6 @@ export class HomeComponent {
     this.Name = 'akash'
 
   }
-
-
   async Details() {
     this.showTable = !this.showTable;
     let endPoint = 'form';
@@ -48,20 +43,16 @@ export class HomeComponent {
 
   edit(id: number) {
     this.apiservices.id = id;
-    this.dataById =  this.apiservices.getApiCall('form', id).subscribe(res=>{
-      this.apiservices.dataById =res
+    this.dataById = this.apiservices.getApiCall('form', id).subscribe(res => {
+      this.apiservices.dataById = res
     })
-    // this.apiservices.dataById = this.dataById;
+
 
     this.router.navigateByUrl('/landing')
   }
 
-  
-  back(){
-  this.router.navigateByUrl('/dashbord')
+
+  back() {
+    this.router.navigateByUrl('/dashbord')
+  }
 }
-}
-// async edit(id: number) {
-//   this.apiservices.id = id;
-//   this.dataById = await this.apiservices.getApiCall('form', id).toPromise();
-//   this.apiservices.dataById = this.dataById;

@@ -1,15 +1,16 @@
-<nav class="navbar ">
-  <button type="button" class="btn btn-outline-danger"(click)="back()">Back</button>
+<nav class="navbar navbar-light" style="background-color: #e0e0e0;">
+  <button type="button" class="btn btn-outline-danger" (click)="back()">Back</button>
   <button type="button" class="btn btn-info" (click)="Details()">Details</button>
   <form class="form-inline">
-    <input class="form-control mr-sm-2" type="search" placeholder="Search" [(ngModel)]="searchText" [ngModelOptions]="{standalone: true}"*ngIf="fDetails.length > 0 && showTable">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search" [(ngModel)]="searchText"
+      [ngModelOptions]="{standalone: true}" *ngIf="fDetails.length > 0 && showTable">
   </form>
 </nav>
-
+<br>
 
 <div id="overflow" *ngIf="fDetails.length > 0 && showTable">
-  <table class="table table-hover table-striped" *ngIf="fDetails.length > 0 && showTable">
-    <thead>
+  <table class="table" *ngIf="fDetails.length > 0 && showTable">
+    <thead class="table-light">
       <tr>
         <th scope="col">Code</th>
         <th scope="col">Name</th>
@@ -25,7 +26,7 @@
 
       </tr>
     </thead>
-    <tbody> <!--   |search:searchText -->
+    <tbody>
       <tr *ngFor="let formData of fDetails |search:searchText">
         <td scope="row">{{formData.Code}}</td>
         <td scope="row">{{formData.Name}}</td>

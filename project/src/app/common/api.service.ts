@@ -5,19 +5,19 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class APIService {
-  id!:any;
-  dataById:any;
+  id!: any;
+  dataById: any;
   Name!: string;
   url = 'http://localhost:3000/';
-  constructor(private Http:HttpClient) { }
+  constructor(private Http: HttpClient) { }
 
   postApiCall(endpoint: string, formData: any) {
     let url = this.url + endpoint;
     return this.Http.post(url, formData);
   }
 
-  getApiCall(endpoint: string, id?:number) {
-    let url = id? this.url + endpoint +'/'+  id: this.url+endpoint;
+  getApiCall(endpoint: string, id?: number) {
+    let url = id ? this.url + endpoint + '/' + id : this.url + endpoint;
     return this.Http.get(url);
 
   }
