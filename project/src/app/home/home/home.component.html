@@ -1,6 +1,6 @@
 <nav class="navbar navbar-light" style="background-color: #e0e0e0;">
   <button type="button" class="btn btn-outline-danger" (click)="back()">Back</button>
-  <button type="button" class="btn btn-info" (click)="Details()">Details</button>
+  <button  type="button" class="btn btn-success"(click)="Details()">Details</button>
   <form class="form-inline">
     <input class="form-control mr-sm-2" type="search" placeholder="Search" [(ngModel)]="searchText"
       [ngModelOptions]="{standalone: true}" *ngIf="fDetails.length > 0 && showTable">
@@ -23,7 +23,7 @@
         <th scope="col">GSTNo</th>
         <th scope="col">PanNo</th>
         <th scope="col">Action</th>
-
+        
       </tr>
     </thead>
     <tbody>
@@ -40,7 +40,7 @@
         <td scope="row">{{formData.PANNo}}</td>
 
 
-        <td><i (click)="deleteRecord(formData.id)" class=" bi bi-trash3-fill"></i></td>
+         <td><i (click)="deleteRecord(formData.id)" class=" bi bi-trash3-fill"></i></td>
         <td><i (click)="edit(formData.id)" class="bi bi-pen"></i></td>
       </tr>
     </tbody>
