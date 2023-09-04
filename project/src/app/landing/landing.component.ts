@@ -17,6 +17,7 @@ export class LandingComponent {
   dataById: any;
   editId: any;
   showForm: boolean = false;
+  showdiv: boolean = false;
 
   constructor(private router: Router,
     private fb: FormBuilder,
@@ -118,7 +119,7 @@ getControl(name:any):AbstractControl|null{
   }
 
   add(){
-this.showdetails
+this.showdiv=true;
   }
 
   back(){

@@ -59,6 +59,36 @@
       "Email": "",
       "currency": "",
       "id": 6
+    },
+    {
+      "GSTNo": "",
+      "PANNo": "",
+      "Code": "",
+      "Name": "",
+      "Address": "",
+      "Pincode": "",
+      "Country": "",
+      "State": "",
+      "City": "",
+      "MobileNo": "",
+      "Email": "",
+      "currency": "",
+      "id": 7
+    },
+    {
+      "GSTNo": "",
+      "PANNo": "",
+      "Code": "",
+      "Name": "",
+      "Address": "",
+      "Pincode": "",
+      "Country": "",
+      "State": "",
+      "City": "",
+      "MobileNo": "",
+      "Email": "",
+      "currency": "",
+      "id": 9
     }
   ],
   "comments": [],

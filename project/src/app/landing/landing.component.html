@@ -1,139 +1,178 @@
 <nav class="navbar navbar-light bg-light">
-    <button type="button" class="btn btn-outline-danger"(click)="back()">back</button>
+    <button type="button" class="btn btn-outline-danger" (click)="back()">back</button>
 </nav>
 <br><br>
 <div class="main">
     <form [formGroup]="form">
         <div>
-            <label>GST No:</label>
-            <input type="text" placeholder="Enter GST No" formControlName="GSTNo"
-                [ngClass]="{error:getControl('GSTNo')?.errors && getControl('GSTNo')?.touched}">&nbsp;&nbsp;
+            <div class="gst">
+                <label>GST No : </label>
+                <input type="text" placeholder="Enter GST No" formControlName="GSTNo"
+                    [ngClass]="{error:getControl('GSTNo')?.errors && getControl('GSTNo')?.touched}">
+            </div>
 
+            <div class="gst1">
+                <label>PAN No : </label>
+                <input type="text" placeholder="Ex:AAECN1498C" formControlName="PANNo"
+                    [ngClass]="{error:getControl('PANNo')?.errors && getControl('PANNo')?.touched}">
+            </div>
 
-
-            <label>PAN No:</label>
-            <input type="text" placeholder="Ex:AAECN1498C" formControlName="PANNo"
-                [ngClass]="{error:getControl('PANNo')?.errors && getControl('PANNo')?.touched}">&nbsp;&nbsp;
-
-
-            <label class="redcol">Code:</label>
-            <input type="text" placeholder="Enter Code" formControlName="Code"
-                [ngClass]="{error:getControl('Code')?.errors && getControl('Code')?.touched}">
+            <div class="label1">
+                <label>Code : </label>
+                <input type="text" placeholder="Enter Code" formControlName="Code"
+                    [ngClass]="{error:getControl('Code')?.errors && getControl('Code')?.touched}">
+            </div>
         </div>
         <br><br>
 
-        <div>
-            <label class="redcol"> Name:</label>
-            <input type="text" placeholder="Enter Namr" formControlName="Name"
-                [ngClass]="{error:getControl('Name')?.errors && getControl('Name')?.touched}">&nbsp;&nbsp;
-
-
-            <label> Address:</label>
-            <input type="text" placeholder="Enter Address" formControlName="Address"
-                [ngClass]="{error:getControl('Address')?.errors && getControl('Address')?.touched}">&nbsp;&nbsp;
-
-
-            <label>Pincode:</label>
-            <input type="pincode" placeholder="Enter  Pincode" formControlName="Pincode"
-                [ngClass]="{error:getControl('Pincode')?.errors && getControl('Pincode')?.touched}">
-        </div>
-
-        <br><br>
-        <div>
-            <label>Country:</label>
-            <input type="text" placeholder="Select Country" formControlName="Country"
-                [ngClass]="{error:getControl('Country')?.errors && getControl('Country')?.touched}">&nbsp;&nbsp;
-
-
-            <label> State :</label>
-            <input type="state" placeholder="Select State" formControlName="State"
-                [ngClass]="{error:getControl('State')?.errors && getControl('State')?.touched}">&nbsp;&nbsp;
-
-
-            <label>City :</label>
-            <input type="text" placeholder="Select city" formControlName="City"
-                [ngClass]="{error:getControl('City')?.errors && getControl('City')?.touched}">
-        </div>
-
-        <br><br><br>
-        <div>
-            &nbsp;&nbsp;&nbsp;&nbsp;
-            <label>Mobile No:</label>
-            <input type="text" placeholder="Enter Mobile No" formControlName="MobileNo"
-                [ngClass]="{error:getControl('MobileNo')?.errors && getControl('MobileNo')?.touched}">&nbsp;&nbsp;
-
-
-            <label>Email:</label>
-            <input type="Email" placeholder="Enter Email" formControlName="Email"
-                [ngClass]="{error:getControl('Email')?.errors && getControl('Email')?.touched}">
-        </div>
-
-        <br><br>
-        <div>
-            <label>Latitude:</label>
-            <input type="text" placeholder="Enter Latitude" formControlName="Latitude"
-                [ngClass]="{error:getControl('Latitude')?.errors && getControl('Latitude')?.touched}">&nbsp;&nbsp;
-
-
-            <label>Longitude:</label>
-            <input type="text" placeholder="Enter Longitude" formControlName="Longitude"
-                [ngClass]="{error:getControl('Longitude')?.errors && getControl('Longitude')?.touched}">&nbsp;&nbsp;
-
-
-            <label>currency:</label>
-            <input type="currency" placeholder="Enter currency" formControlName="currency"
-                [ngClass]="{error:getControl('currency')?.errors && getControl('currency')?.touched}">
-        </div>
-        <br>
-
-        <button class="butt" (click)="attached()"><i class="bi bi-paperclip"></i> attached </button>
-        <div >
-            <form class="personForm" [formGroup]="personForm" *ngIf="showForm">
-
-                <h3>Contact Person Details</h3><hr>
-<br>
-                <label class="redcol">Name:</label>
-                <input type="text" placeholder="Enter Person Name" formControlName="name"
-                    [ngClass]="{error:getControl('name')?.errors && getControl('name')?.touched}">&nbsp;&nbsp;
-
-
-                <label class="redcol">Mobile:</label>
-                <input type="text" placeholder="Enter Mobile no" formControlName="mobile"
-                    [ngClass]="{error:getControl('mobile')?.errors && getControl('mobile')?.touched}">&nbsp;&nbsp;
-
-
-                <label>Email:</label>
-                <input type="text" placeholder="Enter Email" formControlName="email"
-                    [ngClass]="{error:getControl('email')?.errors && getControl('email')?.touched}">&nbsp;&nbsp;
-                <br><br>
-
-
-                <label class="redcol">Department:</label>
-                <input type="text" placeholder="Enter Department" formControlName="Department"
-                    [ngClass]="{error:getControl('Department')?.errors && getControl('Department')?.touched}">&nbsp;&nbsp;
-
-
-                <label class="redcol">Designation:</label>
-                <input type="text" placeholder="Enter Designation" formControlName="Designation"
-                    [ngClass]="{error:getControl('Designation')?.errors && getControl('Designation')?.touched}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-
-
-                <button ype="button" class="btn btn-success" (click)="add()">add</button>&nbsp;&nbsp;
-                <button type="button" class="btn btn-danger" (click)="attached()">Cancel</button>
-
-
-          
-        <div>
-            <form  class="showdetail" [formGroup]="show">
-                <nav class="navbar navbar-light bg-light"></nav>
-            </form>
-        </div>
-    </form>
+        <div class="gst2">
+            <div class="gst">
+                <label> Name : </label>
+                <input type="text" placeholder="Enter Name" formControlName="Name"
+                    [ngClass]="{error:getControl('Name')?.errors && getControl('Name')?.touched}">
+            </div>
+            <div class="gst1">
+                    <label> Address : </label>
+                    <input type="text" placeholder="Enter Address" formControlName="Address"
+                        [ngClass]="{error:getControl('Address')?.errors && getControl('Address')?.touched}">
 </div>
-        <div><br>
-            <button type="button" class="btn btn-success" (click)="submit()">save</button>&nbsp;&nbsp;
-            <button type="button" class="btn btn-danger" (click)="cancal()">Cancel</button>
-        </div>
+<div class="label1">
+                    <label>Pincode : </label>
+                    <input type="pincode" placeholder="Enter  Pincode" formControlName="Pincode"
+                        [ngClass]="{error:getControl('Pincode')?.errors && getControl('Pincode')?.touched}">
+                        </div>
+                </div>
+
+                <br><br>
+                <div class="gst3">
+                    <div class="gst">
+                        <label>Country : </label>
+                        <!-- <input type="text" placeholder="Select Country" formControlName="Country"
+                            [ngClass]="{error:getControl('Country')?.errors && getControl('Country')?.touched}"> -->
+                            <select    select formControlName=" Country"  class="city">
+                        <option  selected hidden >Select  Country</option>
+                        <option value="India">India</option>
+                        <option value="Germany">Germany</option>
+                        <option value="Poland">Poland</option>
+                        <option value="Austria">Austria</option>
+                    </select>
+                    </div>
+                    <div class="gst1">
+                    <label> State : </label>
+                    <!-- <input type="state" placeholder="Select State" formControlName="State"
+                        [ngClass]="{error:getControl('State')?.errors && getControl('State')?.touched}"> -->
+                        <select formControlName="State"  class="city">
+                            <option  selected hidden >Select State</option>
+                            <option value="Karnataka">Karnataka</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Gujarat">Gujarat</option>
+                        </select>
+                    </div>
+                    <div class="label1">
+                    <label>City : </label>
+                    <!-- <input type="text" placeholder="Select city" formControlName="City"
+                [ngClass]="{error:getControl('City')?.errors && getControl('City')?.touched}"> -->
+
+                    <select formControlName="City"  class="city">
+                        <option  selected hidden >Select City</option>
+                        <option value="Pune">Pune</option>
+                        <option value="Mumbai">Mumbai</option>
+                        <option value="Belgaum">Belgaum</option>
+                        <option value="Nashik">Nashik</option>
+                    </select>
+                    </div>
+                </div>
+
+                <br><br><br>
+                <div class="gst4">
+                    <div class="gst1">
+                    <label>Mobile No : </label>
+                    <input type="text" placeholder="Enter Mobile No" formControlName="MobileNo"
+                        [ngClass]="{error:getControl('MobileNo')?.errors && getControl('MobileNo')?.touched}">
+                    </div>
+                    <div class="label1">
+                    <label>Email:</label>
+                    <input type="Email" placeholder="Enter Email" formControlName="Email"
+                        [ngClass]="{error:getControl('Email')?.errors && getControl('Email')?.touched}">
+                    </div>
+                </div>
+
+                <br><br>
+                <div class="gst5">
+                    <div class="gst">
+                        <label>Latitude : </label>
+                        <input type="text" placeholder="Enter Latitude" formControlName="Latitude"
+                            [ngClass]="{error:getControl('Latitude')?.errors && getControl('Latitude')?.touched}">
+                    </div>
+                    <div class="gst1">
+                    <label>Longitude : </label>
+                    <input type="text" placeholder="Enter Longitude" formControlName="Longitude"
+                        [ngClass]="{error:getControl('Longitude')?.errors && getControl('Longitude')?.touched}">
+                    </div>
+                    <div class="label1">
+                    <label>currency : </label>
+                    <input type="currency" placeholder="Enter currency" formControlName="currency"
+                        [ngClass]="{error:getControl('currency')?.errors && getControl('currency')?.touched}">
+                </div>
+                </div>
+               
+
+                <button class="butt" (click)="attached()"><i class="bi bi-paperclip"></i> attached </button>
+                <div>
+                    <form class="personForm" [formGroup]="personForm" *ngIf="showForm">
+
+                        <h3>Contact Person Details</h3>
+                        <hr>
+                        
+                        <div>
+                           <div class="gst">
+                            <label >Name:</label>
+                            <input type="text" placeholder="Enter Person Name" formControlName="name"
+                                [ngClass]="{error:getControl('name')?.errors && getControl('name')?.touched}">&nbsp;&nbsp;
+                            </div>
+                            <div class="gst1">
+                            <label >Mobile:</label>
+                            <input type="text" placeholder="Enter Mobile no" formControlName="mobile"
+                                [ngClass]="{error:getControl('mobile')?.errors && getControl('mobile')?.touched}">&nbsp;&nbsp;
+                            </div>
+                            <div class="label1">
+                            <label>Email:</label>
+                            <input type="text" placeholder="Enter Email" formControlName="email"
+                                [ngClass]="{error:getControl('email')?.errors && getControl('email')?.touched}">&nbsp;&nbsp;
+                            </div>
+                            <br><br>
+
+                        </div>
+                        <div class="gst0">
+                        <div>
+                            <div  class="gst">
+                            <label>Department:</label>
+                            <input type="text" placeholder="Enter Department" formControlName="Department"
+                                [ngClass]="{error:getControl('Department')?.errors && getControl('Department')?.touched}">&nbsp;&nbsp;
+                            </div>
+                            <div class="gst1">
+                            <label>Designation:</label>
+                            <input type="text" placeholder="Enter Designation" formControlName="Designation"
+                                [ngClass]="{error:getControl('Designation')?.errors && getControl('Designation')?.touched}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                            </div>
+                        </div>
+                        <div class="label1">
+                        <button ype="button" class="btn btn-success" (click)="add()">add</button>&nbsp;&nbsp;
+                        <button type="button" class="btn btn-danger" (click)="attached()">Cancel</button>
+                        </div>
+                    </div>
+
+                        <div *ngIf="showdiv" class="showdetail">
+
+                            <textarea name=""  cols="173" rows="11"></textarea>
+
+                        </div>
+                    </form>
+                </div>
+                <div><br>
+                    <button type="button" class="btn btn-success" (click)="submit()">save</button>&nbsp;&nbsp;
+                    <button type="button" class="btn btn-danger" (click)="cancal()">Cancel</button>
+                </div>
     </form>
 </div>

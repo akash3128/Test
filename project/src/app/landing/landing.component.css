@@ -19,8 +19,13 @@ form{
     width: 100%;
 }
 .butt{
-    left: 20px;
+    right: 521px;
     margin-bottom: 20px;
+    position: relative;
+    bottom: 99px;
+    width: 276px;
+border: transparent;
+font-weight: bold;
 }
 .personForm{
   border: 1px solid rgb(139, 139, 139);
@@ -31,15 +36,63 @@ form{
 }
 .redcol{
     color: red;
+    position: relative;
+    right: 68px;
 }
 label{
 color: black;
 font-weight: bold;
+/* position: relative;
+right: 248px; */
 }
 .showdetail{border: 1px solid rgb(139, 139, 139);
     width:98%;
-    height: 300px;
+    height: 271px;
     margin-left: 10px;
     margin-right: 10px;
     margin-top: 7px;
+    position: relative;
+    bottom: 92px;
+}
+.gst{
+    position: relative;
+    right: 507px;
+}
+
+.gst1{
+    position: relative;
+    left: 20px;
+    left: -25px;
+    bottom: 29px;
+
+} 
+.label1{
+    position: relative;
+    left: 436px;
+    bottom: 59px;
+}
+.gst2{
+    position: relative;
+    bottom: 53px;
+}
+.gst3{
+    position: relative;
+    bottom: 101px;
+}
+.gst4{
+    position: relative;
+    bottom: 150px;
+}
+.gst5{
+    position: relative;
+    bottom: 200px;
+}
+.city{
+    width: 195px;
+    height: 27px;
+}
+.gst0{
+    position: relative;
+    bottom: 47px;
+
 }
