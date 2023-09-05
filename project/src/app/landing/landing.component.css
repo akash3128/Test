@@ -22,7 +22,6 @@
 
 }
 
-
 label {
     color: black;
     font-weight: bold;
@@ -41,8 +40,8 @@ label {
 }
 
 .city {
-    width: 195px;
-    height: 27px;
+    width: 189px;
+    height: 31px;
 }
 
 .bar {
@@ -62,10 +61,17 @@ label {
     justify-content: space-between;
     flex-wrap: wrap;
 }
-
+.field{
+    position: relative;
+    right: 16px;
+}
+.field1{
+    position: relative;
+    left: 52px;
+}
 .Ifield {
     position: relative;
-    left: 70px;
+    left: 68px;
 }
 
 .Ifield1 {

@@ -25,7 +25,7 @@
       "Country": "India",
       "State": "Karnataka",
       "City": "Belgaum",
-      "MobileNo": "9191010188",
+      "MobileNo": "9191010120",
       "Email": "avi28866@gmail.com",
       "currency": "India rupee",
       "id": 2
@@ -39,8 +39,8 @@
       "Pincode": "590018",
       "Country": "India",
       "State": "Maharashtra",
-      "City": "Belgaum",
-      "MobileNo": "+919108810188",
+      "City": "pune",
+      "MobileNo": "9108810188",
       "Email": "ag4428866@gmail.com",
       "currency": "India rupee",
       "id": 3
@@ -55,7 +55,7 @@
       "Country": "India",
       "State": "Gujarat",
       "City": "Surat",
-      "MobileNo": "919108810188",
+      "MobileNo": "9508810188",
       "Email": "ag4428866@gmail.com",
       "currency": "India rupee",
       "id": 4
@@ -70,15 +70,10 @@
       "Country": "India",
       "State": "Gujarat",
       "City": "Surat",
-      "MobileNo": "919108810188",
+      "MobileNo": "9388810188",
       "Email": "ag4428866@gmail.com",
       "currency": "India rupee",
       "id": 5
-      
     }
-  ],
-  "comments": [],
-  "profile": {
-    "name": "typicode"
-  }
+  ]
 }

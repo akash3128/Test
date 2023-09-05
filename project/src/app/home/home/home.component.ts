@@ -10,7 +10,7 @@ import { APIService } from 'src/app/common/api.service';
 export class HomeComponent {
   public fDetails: any = [];
   public Name!: string;
-  public formlDetails: any[] = []
+  public formlDetails: any[] = [];
   public showTable: any;
   public dataById: any;
   searchText: any;
