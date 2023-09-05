@@ -7,7 +7,7 @@
         <div class="fields">
             <div class="Ifield">
                 <label>GST No : </label>
-                <input type="number" placeholder="Enter GST No" formControlName="GSTNo"
+                <input type="text" placeholder="Enter GST No" formControlName="GSTNo"
                     [ngClass]="{error:getControl('GSTNo')?.errors && getControl('GSTNo')?.touched}">
             </div>
 
@@ -122,7 +122,7 @@
         <div>
             <form class="personForm" [formGroup]="personForm" *ngIf="showForm">
 
-                <h3>Contact Person Details</h3>
+                <h3 class="label">Contact Person Details</h3>
                 <hr>
 
                 <div class="fields">
